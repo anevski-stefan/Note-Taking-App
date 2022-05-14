@@ -10,29 +10,33 @@
     <script src="https://kit.fontawesome.com/5889b4480a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="wrapper">
-        <h1 id="title">Note Taking App</h1>
-        <div class="box">
-            <input id="note-input" type="text" placeholder="What do you want to do today?">
-            <button onclick="send()">Send!</button>
+    <div class="background">
+        <div class="first_part">
+            <div class="first_box">
+                <h1 id="title">Note Taking App</h1>
+                <div class="first_form">
+                    <input id="note-input" type="text" placeholder="What do you want to do today?">
+                    <button id="send_btn" onclick="send()">Send!</button>
+                </div>
+                <div class="error">
+                    <label>Please put any data in the input field!</label>
+                </div>
+            </div>
+            <div class="second_box">
+                <table class="results-table">
+                    <tbody id="tb">
+                        <tr>
+                            <td>Your note <i class="fa-solid fa-pencil"></i></td>
+                            <td>Created at <i class="fa-solid fa-calendar"></i></td>
+                            <td>Actions <i class="fa-solid fa-screwdriver-wrench"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="export-part">
+                    <button id="export-btn">Export</button>
+                </div>
+            </div>
         </div>
-        <div class="error">
-            <label>Please put any data in the input field!</label>
-        </div>
-    </div>
-    <div class="results">
-        <table class="results-table">
-            <tbody id="tb">
-                <tr>
-                    <td>Your note <i class="fa-solid fa-pencil"></i></td>
-                    <td>Created at <i class="fa-solid fa-calendar"></i></td>
-                    <td>Actions <i class="fa-solid fa-screwdriver-wrench"></i></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="export-part">
-        <button id="export-btn">Export</button>
     </div>
     <script src="script.js"></script>
 </body>
