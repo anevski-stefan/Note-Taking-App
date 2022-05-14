@@ -233,6 +233,7 @@ tr:nth-child(odd) {
     margin-top: 10px;
 }
 
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .background {
@@ -256,11 +257,17 @@ tr:nth-child(odd) {
     }
 
     .first_form {
-        display: block;
         padding: 65px;
         padding-left: 0;
         padding-right: 0;
         padding-top: 10px;
+        padding-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 150px;
+        width: 70%;
     }
 
     table {
@@ -281,7 +288,7 @@ tr:nth-child(odd) {
         outline: none;
         border: none;
         border-radius: 200px;
-        width: 200px;
+        width: 100%;
         height: 50px;
         font-size: 1.5rem;
         padding-top: 7px;
@@ -297,5 +304,36 @@ tr:nth-child(odd) {
         font-size: 1.5rem;
         letter-spacing: 1.5px;
         word-spacing: 3px;
+    }
+
+    #send_btn {
+        margin-left: 0;
+        background: rgb(212, 105, 39);
+        color: rgb(236, 232, 232)
+    }
+
+    .error {
+        color: red;
+        margin: 0;
+        position: absolute;
+        bottom: 75%;
+    }
+
+    table tr:nth-child(odd) td {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    table tr:nth-child(even) td {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    table tr:nth-child(1) td:first-child{
+        border-bottom-left-radius: 0px;
+    }
+
+    table tr:nth-child(1) td:last-child{
+        border-bottom-right-radius: 0px;
     }
 }
