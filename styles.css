@@ -176,13 +176,6 @@ table tr:nth-child(1) td:first-child{
 }
 
 
-table tr td:last-child{
-    border-bottom-right-radius: 10px;
-}
-
-table tr td:first-child{
-    border-bottom-left-radius: 10px;
-}
 
 table tr:nth-child(1) td:last-child{
     border-bottom-right-radius: 0px;
