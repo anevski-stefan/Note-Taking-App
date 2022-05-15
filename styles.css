@@ -176,7 +176,6 @@ table tr:nth-child(1) td:first-child{
 }
 
 
-
 table tr:nth-child(1) td:last-child{
     border-bottom-right-radius: 0px;
 }
@@ -328,5 +327,71 @@ tr:nth-child(odd) {
 
     table tr:nth-child(1) td:last-child{
         border-bottom-right-radius: 0px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .background {
+        min-width: 768px;
+        width: 100%;
+    }
+
+    .first_part {
+        width: 100%;
+        margin: none;
+        height: 100vh;
+        display: block;
+    }
+
+    .export-part {
+        width: 100%;
+        margin: auto;
+        display: block;
+        padding: 15px 0;
+        display: flex;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .background {
+        min-width: 992px;
+        width: 100%;
+    }
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .background {
+        min-width: 1200px;
+        width: 100%;
+    }
+
+    body {
+        min-width: 1200px;
+        width: 100%;
+    }
+
+    .first_part {
+        width: 100%;
+        margin: none;
+        height: 100vh;
+        display: block;
+    }
+
+    .export-part {
+        width: 100%;
+        display: block;
+        padding: 15px 0;
+        display: flex;
+    }
+
+    .second_box {
+        width: 80%;
+        margin: auto;
     }
 }
