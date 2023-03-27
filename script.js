@@ -1,17 +1,17 @@
-var note_input = document.querySelector("#note-input");
-var results = document.querySelector(".results-table");
-var clicked2 = false;
-var error = document.querySelector(".error");
-var export_btn = document.querySelector("#export-btn");
+let note_input = document.querySelector("#note-input");
+let results = document.querySelector(".results-table");
+let clicked2 = false;
+let error = document.querySelector(".error");
+let export_btn = document.querySelector("#export-btn");
 error.style.display = "none";
-var tbody = document.querySelector("#tb");
+let tbody = document.querySelector("#tb");
 export_btn.style.display = "none";
 
 results.children[0].children[0].classList.add("no-select");
 export_btn.addEventListener("click", function() {
     htmlToCSV("notes.csv");
-    var lastRow = results.rows.length-1;
-    for(var i = lastRow; i > 0; i--){
+    let lastRow = results.rows.length-1;
+    for(let i = lastRow; i > 0; i--){
         results.deleteRow(i);
     }
     export_btn.style.display = "none";
@@ -19,7 +19,7 @@ export_btn.addEventListener("click", function() {
 
 
 function downloadCSVFile(csv, filename) {
-	var csv_file, download_link;
+	let csv_file, download_link;
 
 	csv_file = new Blob([csv], {type: "text/csv"});
 
@@ -37,14 +37,14 @@ function downloadCSVFile(csv, filename) {
 }
 
 function htmlToCSV(filename) {
-	var data = [];
-    var rows = document.querySelectorAll(".results-table tr");
+	let data = [];
+    let rows = document.querySelectorAll(".results-table tr");
 
     if(rows.length > 1){
-        for (var i = 0; i < rows.length; i++) {
-            var row = [], cols = rows[i].querySelectorAll("tr, td");
+        for (let i = 0; i < rows.length; i++) {
+            let row = [], cols = rows[i].querySelectorAll("tr, td");
 
-        for (var j = 0; j < cols.length-1; j++) {
+        for (let j = 0; j < cols.length-1; j++) {
             row.push(cols[j].innerText);
         }
 
@@ -60,38 +60,38 @@ function send(){
     if(note_input.value.length > 0){
         error.style.display = "none";
         export_btn.style.display = "block";
-        var tr = document.createElement("tr");
-        var td1 = document.createElement("td");
-        var td2 = document.createElement("td");
-        var td3 = document.createElement("td");
+        let tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
 
         td1.textContent = note_input.value;
         //var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
-        var dt = new Date();
-        var timeString = dt.getFullYear() +  "-" + dt.getMonth() + "-" + dt.getDate() + " " + dt.getHours() + ":" + dt.getMinutes() +":" + dt.getSeconds();
+        let dt = new Date();
+        let timeString = dt.getFullYear() +  "-" + dt.getMonth() + "-" + dt.getDate() + " " + dt.getHours() + ":" + dt.getMinutes() +":" + dt.getSeconds();
         td2.innerHTML = timeString;
 
-        var span = document.createElement("span");
-        var a1 = document.createElement("a");
-        var a2 = document.createElement("a");
+        let span = document.createElement("span");
+        let a1 = document.createElement("a");
+        let a2 = document.createElement("a");
         a1.style.cursor = "pointer";
         a2.style.cursor = "pointer";
 
 
-        var i1 = document.createElement("i");
+        let i1 = document.createElement("i");
         i1.classList.add("fa-solid");
         i1.classList.add("fa-trash");
         i1.classList.add("red");
         i1.style.marginRight = "20px";
 
-        var i2 = document.createElement("i");
+        let i2 = document.createElement("i");
         i2.classList.add("fa-solid");
         i2.classList.add("fa-circle-check");
         i2.classList.add("blue");
 
         a1.onclick = function(){
             error.style.display = "none";
-            var removed_tr = a1.closest("tr");
+            let removed_tr = a1.closest("tr");
             results.deleteRow(removed_tr.rowIndex);
             if(results.rows.length == 1){
                 export_btn.style.display = "none";
@@ -100,9 +100,9 @@ function send(){
 
         a2.onclick = function() {
             clicked2 = true;
-            var disabled_tr = a1.closest("tr");
-            var btn_disabled1 = disabled_tr.children[2].children[0].children[0];
-            var btn_disabled2 = disabled_tr.children[2].children[0].children[1];
+            let disabled_tr = a1.closest("tr");
+            let btn_disabled1 = disabled_tr.children[2].children[0].children[0];
+            let btn_disabled2 = disabled_tr.children[2].children[0].children[1];
             //disabled_tr.classList.add("disabled-trr");
             disabled_tr.children[0].classList.add("disabled-trr");
             disabled_tr.children[1].classList.add("disabled-trr");
