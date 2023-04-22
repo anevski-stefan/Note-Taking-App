@@ -1,62 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Note Taking App</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/5889b4480a.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="background">
-        <div class="first_part">
-            <div class="first_box">
-                <h1 id="title">Note Taking App</h1>
-                <div class="first_form">
-                    <input id="note-input" type="text" placeholder="What do you want to do today?">
-                    <button id="send_btn" onclick="send()">Send!</button>
-                </div>
-                <div class="error">
-                    <label>Please put any data in the input field!</label>
-                </div>
-            </div>
-            <div class="second_box">
-                <table class="results-table">
-                    <tbody id="tb">
-                        <tr>
-                            <td>Your note <i class="fa-solid fa-pencil"></i></td>
-                            <td>Created at <i class="fa-solid fa-calendar"></i></td>
-                            <td>Actions <i class="fa-solid fa-screwdriver-wrench"></i></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="export-part">
-                    <button id="export-btn">Export</button>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <div>
-                Made from <i class="fa-solid fa-heart heart"></i> by Stefan Anevski
-            </div>
-            <ul class="social-links">
-                <li>
-                    <a href="https://github.com/anevski-stefan" target="_blank"><i class="fa-brands fa-github"></i></a>
-                </li>
-                <li>
-                    <a href="https://linkedin.com/in/stefan-anevski-ab4712177" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/anevskis/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                </li>
-                <li>
-                    <a href="mailto:anevskistefan11@gmail.com" target="_blank"><i class="fa-sharp fa-solid fa-reply"></i></a>
-                </li>
-            </ul>
-        </footer>
-    </div>
-    <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/5889b4480a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
