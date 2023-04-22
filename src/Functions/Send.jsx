@@ -1,4 +1,4 @@
-import htmlToCSV from "./HtmlToCSV";
+import htmlToCSV from "./HtmlToCsv";
 
 export default function send() {
   let note_input = document.querySelector("#note-input");
